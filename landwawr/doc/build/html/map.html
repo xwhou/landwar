@@ -1,0 +1,183 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>map module &#8212; RTS_WRRGAME 0.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-map">
+<span id="map-module"></span><h1>map module<a class="headerlink" href="#module-map" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="map.Map">
+<em class="property">class </em><code class="descclassname">map.</code><code class="descname">Map</code><a class="headerlink" href="#map.Map" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>地图类</p>
+<dl class="method">
+<dt id="map.Map.check_see">
+<code class="descname">check_see</code><span class="sig-paren">(</span><em>pos1</em>, <em>pos2</em><span class="sig-paren">)</span><a class="headerlink" href="#map.Map.check_see" title="Permalink to this definition">¶</a></dt>
+<dd><p>判断两个位置是否通视
+:param pos1:
+:param pos2:
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="map.Map.get_height">
+<code class="descname">get_height</code><span class="sig-paren">(</span><em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#map.Map.get_height" title="Permalink to this definition">¶</a></dt>
+<dd><p>获取指定位置的高程
+:param pos:
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="map.Map.get_height_change_level">
+<code class="descname">get_height_change_level</code><span class="sig-paren">(</span><em>pos1</em>, <em>pos2</em><span class="sig-paren">)</span><a class="headerlink" href="#map.Map.get_height_change_level" title="Permalink to this definition">¶</a></dt>
+<dd><p>获取两个位置的高差变化等级
+:param pos1:
+:param pos2:
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="map.Map.get_neighbors">
+<code class="descname">get_neighbors</code><span class="sig-paren">(</span><em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#map.Map.get_neighbors" title="Permalink to this definition">¶</a></dt>
+<dd><p>获取指定位置的邻域
+:param pos: 四位坐标
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="map.Map.get_path">
+<code class="descname">get_path</code><span class="sig-paren">(</span><em>pos1</em>, <em>pos2</em>, <em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#map.Map.get_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>获取通行代价最小的路径
+:param pos1:出发点坐标
+:param pos2:目标点坐标
+:param type:通行方式
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="map.Map.get_see_range">
+<code class="descname">get_see_range</code><span class="sig-paren">(</span><em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#map.Map.get_see_range" title="Permalink to this definition">¶</a></dt>
+<dd><p>获取指定位置的通视范围
+:param pos:
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="map.Map.get_speed_ratio">
+<code class="descname">get_speed_ratio</code><span class="sig-paren">(</span><em>pos1</em>, <em>pos2</em><span class="sig-paren">)</span><a class="headerlink" href="#map.Map.get_speed_ratio" title="Permalink to this definition">¶</a></dt>
+<dd><p>获取位置1到位置2的速度变化率
+:param pos1:
+:param pos2:
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="map.Map.load_from_db">
+<code class="descname">load_from_db</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#map.Map.load_from_db" title="Permalink to this definition">¶</a></dt>
+<dd><p>从数据库中加载初始化信息
+数据库配置根据想定编号+配置文件确定
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="map.Map.load_from_file">
+<code class="descname">load_from_file</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#map.Map.load_from_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>从本地文件中加载初始化信息
+文件位置根据想定编号+配置文件确定
+:return:</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">RTS_WRRGAME</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, test.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/map.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

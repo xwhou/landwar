@@ -1,0 +1,52 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# @Time    : 19-11-8 下午3:22
+# @Author  : sgr
+# @Site    : 
+# @File    : moving.py
+
+
+class Moving:
+    """
+    机动状态
+    """
+    def __init__(self):
+        """
+        cur_pos # 当前坐标
+        target_pos  # 目标位置
+        cur_fine_pos    # 当前小数坐标
+        cur_speed   # 速度
+        max_speed   # 最大速度
+        move_state  # 机动状态
+        """
+        pass
+
+
+# 客户端接受的移动状态消息
+{
+    'operators':{
+        'ID':'int 算子唯一标识'
+        'blood':'int 当前血量'
+        'cur_hex':'int 当前六角格坐标'
+        'cur_pos':'double 当前小数坐标'
+        'keep':'int 压制'
+        'tire':'int 疲劳等级'
+        'move_state':'int 机动状态'  # 0机动 1行军 2一级冲锋 3二级冲锋
+        #以下部分不确定是否需要
+        'color':'int 所属方'
+        'value':'int 分值/每班'
+        'cur_speed':'int 速度'
+        'max_speed':'int 最大速度'
+    }
+    'time':{
+        'game_step':'int(s) 当前步长',
+        'simulate_time':'int(s) 当前仿真时间',
+        'step_time':'int(s) 每步对应仿真时间'
+    },
+    'cities':{
+        'coord':'int 坐标',
+        'score':'int 分值',
+        'falg':'int 占领标志',
+    }
+}
+

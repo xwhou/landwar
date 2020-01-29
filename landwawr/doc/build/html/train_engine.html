@@ -1,0 +1,233 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>train_engine module &#8212; RTS_WRRGAME 0.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-train_engine">
+<span id="train-engine-module"></span><h1>train_engine module<a class="headerlink" href="#module-train_engine" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="train_engine.TrainEngine">
+<em class="property">class </em><code class="descclassname">train_engine.</code><code class="descname">TrainEngine</code><span class="sig-paren">(</span><em>scenario_index</em><span class="sig-paren">)</span><a class="headerlink" href="#train_engine.TrainEngine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>训练引擎类
+管理整个训练所需组件，提供训练所需接口</p>
+<dl class="method">
+<dt id="train_engine.TrainEngine.actions">
+<code class="descname">actions</code><span class="sig-paren">(</span><em>action_msg</em><span class="sig-paren">)</span><a class="headerlink" href="#train_engine.TrainEngine.actions" title="Permalink to this definition">¶</a></dt>
+<dd><p>接收动作，将动作发送到action_msg_sets中解析并保存；
+作初步检查，若有不合法指令，返回提示信息；
+:param action_msg: 动作消息
+:return: results:   action_msg  附有提示信息的动作消息</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="train_engine.TrainEngine.get_action_msg_sets">
+<code class="descname">get_action_msg_sets</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#train_engine.TrainEngine.get_action_msg_sets" title="Permalink to this definition">¶</a></dt>
+<dd><p>返回动作消息集
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="train_engine.TrainEngine.get_cities">
+<code class="descname">get_cities</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#train_engine.TrainEngine.get_cities" title="Permalink to this definition">¶</a></dt>
+<dd><p>获取夺控点集合
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="train_engine.TrainEngine.get_clock">
+<code class="descname">get_clock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#train_engine.TrainEngine.get_clock" title="Permalink to this definition">¶</a></dt>
+<dd><p>获取时钟
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="train_engine.TrainEngine.get_jm_points">
+<code class="descname">get_jm_points</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#train_engine.TrainEngine.get_jm_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>获取间瞄点集合
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="train_engine.TrainEngine.get_map">
+<code class="descname">get_map</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#train_engine.TrainEngine.get_map" title="Permalink to this definition">¶</a></dt>
+<dd><p>获取地图集合
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="train_engine.TrainEngine.get_operators">
+<code class="descname">get_operators</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#train_engine.TrainEngine.get_operators" title="Permalink to this definition">¶</a></dt>
+<dd><p>获取算子集合
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="train_engine.TrainEngine.get_weapon">
+<code class="descname">get_weapon</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#train_engine.TrainEngine.get_weapon" title="Permalink to this definition">¶</a></dt>
+<dd><p>获取武器集合
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="train_engine.TrainEngine.load_from_db">
+<code class="descname">load_from_db</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#train_engine.TrainEngine.load_from_db" title="Permalink to this definition">¶</a></dt>
+<dd><p>从数据库中加载初始化信息
+数据库配置根据想定编号+配置文件确定
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="train_engine.TrainEngine.load_from_dict">
+<code class="descname">load_from_dict</code><span class="sig-paren">(</span><em>dic_init_data</em><span class="sig-paren">)</span><a class="headerlink" href="#train_engine.TrainEngine.load_from_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>从输入数据中加载初始化信息; 用于训练中从任意状态加载对战数据
+:param dic_init_data: 初始化对战数据
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="train_engine.TrainEngine.load_from_file">
+<code class="descname">load_from_file</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#train_engine.TrainEngine.load_from_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>从本地文件中加载初始化信息
+文件位置根据想定编号+配置文件确定
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="train_engine.TrainEngine.step">
+<code class="descname">step</code><span class="sig-paren">(</span><em>count=1</em><span class="sig-paren">)</span><a class="headerlink" href="#train_engine.TrainEngine.step" title="Permalink to this definition">¶</a></dt>
+<dd><p>时钟推进count步
+:param count: int
+:return: 态势数据 {</p>
+<blockquote>
+<div><blockquote>
+<div><p>‘operators’: ‘[<a href="#id1"><span class="problematic" id="id2">**</span></a>kwargs] 算子’,
+‘time’: {</p>
+<blockquote>
+<div><blockquote>
+<div>‘game_step’: ‘int(s) 当前步长’,
+‘simulate_time’: ‘int(s) 当前仿真时间’,
+‘step_time’: ‘int(s) 每步对应仿真时间’</div></blockquote>
+<p>},</p>
+</div></blockquote>
+<dl class="docutils">
+<dt>‘cities’: [{</dt>
+<dd><blockquote class="first">
+<div>‘coord’: ‘int 坐标’,
+‘score’: ‘int  分值’,
+‘flag’: ‘int 占领标志’,</div></blockquote>
+<p class="last">}],</p>
+</dd>
+<dt>‘JMPoint’: [{</dt>
+<dd><blockquote class="first">
+<div>‘coord’: ‘int 坐标’,
+‘color’: ‘int 炮瞄点设置方’,
+‘valid’: ‘int 是否生效’,
+‘fly_remain_time’: ‘int(s) 飞行剩余时间’,
+‘boom_remain_time’: ‘int(s) 爆炸剩余时间’,</div></blockquote>
+<p class="last">}],</p>
+</dd>
+</dl>
+<p>‘valid_actions’: ‘[<a href="#id3"><span class="problematic" id="id4">**</span></a>kwargs] 候选动作’,
+‘last_actions’: ‘[<a href="#id5"><span class="problematic" id="id6">**</span></a>kwargs] 上次执行动作’,
+‘action_result’: ‘[<a href="#id7"><span class="problematic" id="id8">**</span></a>kwargs] 动作执行结果’,
+‘finished’: ‘int 是否结束标志’</p>
+</div></blockquote>
+<p>}</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">RTS_WRRGAME</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, test.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/train_engine.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

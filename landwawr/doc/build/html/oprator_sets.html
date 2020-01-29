@@ -1,0 +1,187 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>oprator_sets module &#8212; RTS_WRRGAME 0.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-oprator_sets">
+<span id="oprator-sets-module"></span><h1>oprator_sets module<a class="headerlink" href="#module-oprator_sets" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="oprator_sets.OperatorSets">
+<em class="property">class </em><code class="descclassname">oprator_sets.</code><code class="descname">OperatorSets</code><span class="sig-paren">(</span><em>scenario_index</em><span class="sig-paren">)</span><a class="headerlink" href="#oprator_sets.OperatorSets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>算子集合类
+维护算子集合，封装算子查找，检查，修改相关操作</p>
+<dl class="method">
+<dt id="oprator_sets.OperatorSets.get_bop_by_id">
+<code class="descname">get_bop_by_id</code><span class="sig-paren">(</span><em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#oprator_sets.OperatorSets.get_bop_by_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>根据id获取算子
+:param id:
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oprator_sets.OperatorSets.get_bops_by_color">
+<code class="descname">get_bops_by_color</code><span class="sig-paren">(</span><em>color</em><span class="sig-paren">)</span><a class="headerlink" href="#oprator_sets.OperatorSets.get_bops_by_color" title="Permalink to this definition">¶</a></dt>
+<dd><p>根据指定颜色获取算子列表
+:param color:
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oprator_sets.OperatorSets.get_bops_by_pos">
+<code class="descname">get_bops_by_pos</code><span class="sig-paren">(</span><em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#oprator_sets.OperatorSets.get_bops_by_pos" title="Permalink to this definition">¶</a></dt>
+<dd><p>根据位置获取算子列表
+:param pos: 四位坐标
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oprator_sets.OperatorSets.get_my_see_bops">
+<code class="descname">get_my_see_bops</code><span class="sig-paren">(</span><em>color</em><span class="sig-paren">)</span><a class="headerlink" href="#oprator_sets.OperatorSets.get_my_see_bops" title="Permalink to this definition">¶</a></dt>
+<dd><p>获取我方可见所有算子
+:param color:
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oprator_sets.OperatorSets.get_my_see_pos">
+<code class="descname">get_my_see_pos</code><span class="sig-paren">(</span><em>color</em><span class="sig-paren">)</span><a class="headerlink" href="#oprator_sets.OperatorSets.get_my_see_pos" title="Permalink to this definition">¶</a></dt>
+<dd><p>获取我方算子通视位置
+:param color:
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oprator_sets.OperatorSets.get_my_see_valid_bops">
+<code class="descname">get_my_see_valid_bops</code><span class="sig-paren">(</span><em>color</em><span class="sig-paren">)</span><a class="headerlink" href="#oprator_sets.OperatorSets.get_my_see_valid_bops" title="Permalink to this definition">¶</a></dt>
+<dd><p>获取我方可见可控制算子
+:param color:
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oprator_sets.OperatorSets.get_valid_bops_by_color">
+<code class="descname">get_valid_bops_by_color</code><span class="sig-paren">(</span><em>color</em><span class="sig-paren">)</span><a class="headerlink" href="#oprator_sets.OperatorSets.get_valid_bops_by_color" title="Permalink to this definition">¶</a></dt>
+<dd><p>获取指定颜色的可操作算子
+:param color:
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oprator_sets.OperatorSets.load_from_db">
+<code class="descname">load_from_db</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oprator_sets.OperatorSets.load_from_db" title="Permalink to this definition">¶</a></dt>
+<dd><p>从数据库中加载初始化信息
+数据库配置根据想定编号+配置文件确定
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oprator_sets.OperatorSets.load_from_dict">
+<code class="descname">load_from_dict</code><span class="sig-paren">(</span><em>dic_init_data</em><span class="sig-paren">)</span><a class="headerlink" href="#oprator_sets.OperatorSets.load_from_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>从输入数据中加载初始化信息; 用于训练中从任意状态加载对战数据
+:param dic_init_data: 初始化对战数据
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="oprator_sets.OperatorSets.load_from_file">
+<code class="descname">load_from_file</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oprator_sets.OperatorSets.load_from_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>从本地文件中加载初始化信息
+文件位置根据想定编号+配置文件确定
+:return:</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">RTS_WRRGAME</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, test.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/oprator_sets.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

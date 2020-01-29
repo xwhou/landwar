@@ -1,0 +1,1 @@
+{"obj_id": "算子ID int", "type": "动作类型 ['1-机动', '2-射击', '3-上车', '4-下车', '5-夺控', '6-切换状态', '7-移除压制', '8-间瞄', '9-引导射击']", "move_path": "机动路径 list(int)", "target_obj_id": "目标算子ID or 车辆算子ID or 下车算子ID int", "weapon_id": "武器编号 int", "jm_pos": "间瞄点位置 int", "target_state": "目标状态 int"}
